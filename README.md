@@ -5,6 +5,6 @@ A special functions library meant for use in microcontrollers/embedded systems. 
 The short term goals are to implement the special function of ```math.h``` and then perhaps look at additional functions. Including making a publive version of the python tools used to create optimal approximations so that c functions can be generated for arbitrary functions.
 
 ## Implemented Functions
-*exp
+* exp
 ## To Implement
 
