@@ -6,5 +6,11 @@ The short term goals are to implement the special function of ```math.h``` and t
 
 ## Implemented Functions
 * exp
+* sine
+* cosine
 ## To Implement
-
+* tan
+* hyperbolic functions
+* logrithms
+* pow
+* sqrt
