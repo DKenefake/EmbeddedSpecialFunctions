@@ -54,18 +54,22 @@ double exp_fp64_poly_16(double x) {
 
 // raise a floating poing number to a integral power
 double ipow(double x, int n) {
-	if (n < 0)
-		return ipow(1.0/x, -n);
-	if (n == 0)
-		return 1.0;
-	if ((n & 1) == 0)
-		return ipow(x * x, n / 2);
-	else {
-		if (n > 1)
-			return x * ipow(x * x, n / 2);
-		else
-			return x;
+	if (n < 0) {
+		x = 1.0 / x;
+		n = -n;
 	}
+
+	double product = 1.0;
+	double partial = x;
+
+	while (n >= 1) {
+		double flag = double(n % 2 != 0);
+		product *= 1.0 - flag + flag * partial;
+		partial *= partial;
+		n >>= 1;
+	}
+
+	return product;
 }
 
 double exp__(double x) {
