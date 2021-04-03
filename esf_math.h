@@ -9,7 +9,7 @@ float fabs_esf(float x){
 }
 
 double fabs_esf(double x){
-	return 	x < 0.0f ? -x : x;
+	return 	x < 0.0 ? -x : x;
 }
 
 float exp_fp32_poly_3(float x) {
